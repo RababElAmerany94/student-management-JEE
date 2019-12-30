@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 10, 2018 1:14:17 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Entities.Filieres" table="filieres" catalog="bdecole" optimistic-lock="version">
+        <id name="code" type="string">
+            <column name="code" length="100" />
+            <generator class="assigned" />
+        </id>
+        <property name="nom" type="string">
+            <column name="nom" length="100" not-null="true" />
+        </property>
+        <set name="eleves" table="eleve" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="filiere" length="100" not-null="true" />
+            </key>
+            <one-to-many class="Entities.Eleve" />
+        </set>
+    </class>
+</hibernate-mapping>

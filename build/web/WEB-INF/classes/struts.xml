@@ -1,0 +1,39 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="connectUser" method="isConnected" class="action.userAction">
+            <result name="success" type="redirect">listfiliere</result> 
+        </action> 
+        <action name="saveOrUpdate" method="saveOrUpdate" class="action.filiereAction">
+            <result name="success" type="redirect">listfiliere</result>
+        </action>
+        <action name="listfiliere" method="list" class="action.filiereAction">
+            <result name="success">filieres.jsp</result>
+        </action>
+        <action name="updatefiliere" method="edit" class="action.filiereAction">
+            <result name="success" >updatefiliere.jsp</result>
+        </action>
+        <action name="deletefiliere" method="delete" class="action.filiereAction">
+            <result name="success" type="redirect">listfiliere</result>
+        </action>
+        <action name="listetudiant" method="listf" class="action.etudiantAction">
+            <result name="success">filiere.jsp</result>
+        </action>
+        <action name="addeEtudiant" method="list" class="action.etudiantAction">
+            <result name="success">filiere.jsp</result>
+        </action>
+        <action name="updateEtudiant" method="edit" class="action.etudiantAction">
+            <result name="success">updateetudiant.jsp</result>            
+        </action>
+        <action name="deleteEtudiant" method="delete" class="action.etudiantAction">
+            <result name="success">filiere.jsp</result>            
+        </action>
+        <action name="saveOrUpdateEtudiant" method="saveOrUpdate" class="action.etudiantAction">
+            <result name="success" >filiere.jsp</result>
+        </action>
+    </package>
+</struts>
