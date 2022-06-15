@@ -35,6 +35,6 @@ Student management has to be learned with time, and it comes with experience. Th
 
 Rabab El Amerany - rab.el.amerany@gmail.com
 
-Project Link: [https://github.com/RababElAmerany94/platform-to-track-orders](https://github.com/RababElAmerany94/platform-to-track-orders)
+Project Link: [https://github.com/rabelamerany/student-management-JEE](https://github.com/rabelamerany/student-management-JEE)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
